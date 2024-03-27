@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Mini-Gemini">
+  <meta name="keywords" content="GPT-4, open-source, vision-language">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini-Gemini</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  </head>
+
+  <style>
+
+    #main{
+        position: relative;;
+        width: 1200px;
+    }
+
+    .box{
+        float: left;
+        padding: 15px 0 0 15px;
+/*        background-color: red;*/
+    }
+
+    .pic{
+        width: 500px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .pic img{
+        width: 500px;
+    }
+
+  </style>
+
+  <body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><img id="logo" width="5%" src="images/logo.png"> Mini-Gemini:</h1>
+          <h2 class="title is-2 publication-title">Mining the Potential for Multi-modality Vision Language Models</h2>
+          <div class="is-size-5">
+            <span class="author-block">
+                <a href="https://yanwei-li.com/" style="color:#008AD7;font-weight:normal;">Yanwei Li*<sup></sup></a>,                
+            </span>
+            <span class="author-block">
+              <a href="https://julianjuaner.github.io/" style="color:#008AD7;font-weight:normal;">Yuechen Zhang*<sup></sup></a>,                
+            </span>
+            <span class="author-block">
+              <a href="https://wcy1122.github.io/" style="color:#008AD7;font-weight:normal;">Chengyao Wang*<sup></sup></a>,                
+            </span>
+            <span class="author-block">
+              <a href="https://zhishengzhong.com/" style="color:#008AD7;font-weight:normal;">Zhisheng Zhong<sup></sup></a>,                
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://yix-chen.github.io/" style="color:#008AD7;font-weight:normal;">Yixin Chen<sup></sup></a>,                
+            </span>
+            <span class="author-block">
+              <a href="https://ruihangchu.com/" style="color:#008AD7;font-weight:normal;">Ruihang Chu<sup></sup></a>,                
+            </span>
+            <span class="author-block">
+              <a href="https://www.shaotengliu.com/" style="color:#008AD7;font-weight:normal;">Shaoteng Liu<sup></sup></a>,                
+            </span>
+            <span class="author-block">
+              <a href="https://jiaya.me/" style="color:#008AD7;font-weight:normal;">Jiaya Jia<sup></sup></a>,                
+            </span>
+            
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> The Chinese University of Hong Kong </span>
+          </div>
+
+          <br>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              
+              
+              <span class="link-block">
+                <a href="https://github.com/dvlab-research/MiniGemini" target="_blank" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="http://103.170.5.190:7860/" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-laugh"></i>
+                  </span>
+                  <span>Demo</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                      <a href="https://huggingface.co/YanweiLi" target="_blank"
+                         class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        🤗
+                      </span>
+                      <span>Models</span>
+                    </a>
+                  </span>
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.17043" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            <strong><font>Updates</font></strong>: Mini-Gemini is comming! We release the paper, code, data, models, and demo for Mini-Gemini.
+            <br>
+            </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Demo</h2>
+          <div class="content has-text-justified">
+            <p>
+            Welcome to try our <a href="http://103.170.5.190:7860/" style="color:#d7001d;font-weight:normal;">demo<sup></sup></a> of Mini-Gemini!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <br>
+    <br> 
+
+<!-- <div align="center">
+<iframe
+  id="gradio"
+	src="http://103.170.5.190:7864/"
+	frameborder="0"
+	width="1300"
+	height="2300"
+></iframe>
+</div> -->
+
+<link rel="stylesheet" type="text/css" href="js/simple_style.css" />
+<script type="text/javascript" src="js/simple_swiper.js"></script>
+
+<section class="section">
+  <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+          <p>
+            In this work, we introduce Mini-Gemini, a simple and effective framework enhancing multi-modality Vision Language Models (VLMs).
+            Despite the advancements in VLMs facilitating basic visual dialog and reasoning, a performance gap persists compared to advanced models like GPT-4 and Gemini. 
+            We try to narrow the gap by mining the potential of VLMs for better performance and any-to-any workflow from three aspects, i.e., high-resolution visual tokens, high-quality data, and VLM-guided generation.
+            To enhance visual tokens, we propose to utilize an additional visual encoder for high-resolution refinement without increasing the visual token count.
+            We further construct a high-quality dataset that promotes precise image comprehension and reasoning-based generation, expanding the operational scope of current VLMs.
+            In general, Mini-Gemini further mines the potential of VLMs and empowers current framework with image understanding, reasoning, and generation simultaneously.
+            Mini-Gemini supports a series of dense and MoE Large Language Models (LLMs) from 2B to 34B.
+            It is demonstrated to achieve leading performance in several zero-shot benchmarks and even surpass the developed private models.
+          </p>
+          </div>
+      </div>
+      </div>
+      <br>
+      <br>
+
+<!-- Paper Model. -->
+<div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Model</h2>
+      <div class="content has-text-justified">
+        <p>
+          The framework of Mini-Gemini is conceptually simple: dual vision encoders are utilized to provide low-resolution visual embedding and high-resolution candidates;
+          patch info mining is proposed to conduct patch-level mining between high-resolution regions and low-resolution visual queries;
+          LLM is utilized to marry text with images for both comprehension and generation at the same time.
+        </p>
+      </div>  
+      <img id="model" width="100%" src="images/pipeline.png">
+      </h3>   
+    </div>
+  </div>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+@article{li2024minigemini,
+  title={LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models},
+  author={Li, Yanwei and Zhang, Yuechen and Wang, Chengyao and Zhong, Zhisheng and Chen, Yixin and Chu, Ruihang and Liu, Shaoteng and Jia, Jiaya},
+  journal={arXiv preprint arXiv:2403.xxxxx},
+  year={2024}
+}
+  </code></pre>
+    </div>
+  </section>
+  
+
+  <section class="section" id="Acknowledgement">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgement</h2>
+      <p>
+        This website is adapted from <a
+        href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
+                                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </section>
+
+<section class="section">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Examples</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script src="js/Underscore-min.js"></script>
+<script src="js/index.js"></script>
+
+<!-- <section class="section"> -->
+  <div class="columns is-centered has-text-centered">
+    <div id="main">
+      <img src="images/understanding_ocr.png" width="80%" alt="">
+    <br><br>
+    <div id="main">
+      <img src="images/generation.png" width="80%" alt="">
+    </div>
+    
+</section>
+
+
+    
+
+</body>
+
+</html>

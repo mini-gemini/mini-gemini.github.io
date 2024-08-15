@@ -16,8 +16,9 @@
         <h2 class="sidebar-title">Trio</h2>
         
             <ul>
-                <li><a href="#text-guided" class="nav-link"><i class="fas fa-paint-brush"></i> Overview </a></li>
-                <li><a href="#svd" class="nav-link"><i class="fas fa-video"></i> Audio</a></li>
+                <li><a href="#text-guided" class="nav-link"><i class="fas fa-paint-brush"></i> Framework </a></li>
+                <li><a href="#audio" class="nav-link"><i class="fas fa-file-audio"></i> Audio</a></li>
+                <li><a href="#video" class="nav-link"><i class="fas fa-video"></i> Video</a></li>
                 <li><a href="#contact-us" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
             </ul>
         
@@ -35,8 +36,8 @@
                     <span class="author"><a href="https://jiaya.me/" target="_blank">Jiaya Jia</a></span>
                 </p>
                 <p>
-                    <span class="affiliation">The Chinese University of Hong Kong</span>, 
-                    <span class="affiliation">SmartMore</span>
+                    <span class="affiliation">The Chinese University of Hong Kong </span>, 
+                    <span class="affiliation"> SmartMore</span>
                 </p>
             </div>
             <div class="links">
@@ -44,9 +45,70 @@
                 <p><a href="xxx" target="_blank">GitHub</a></p>
             </div>
            
-        
+            <section id="text-guided" class="gallery-section">
+                <h2>Overview </h2>
 
-
+                <div class="gallery">
+                    
+                    <div class="gallery-item" style=" --aspect-ratio: 13 / 3;  grid-column: span 14; grid-row: span 2;">
+                        <img src="figs/Framework.png" alt=" " class="gallery-image">
+                        <div class="resolution">Framework</div>
+                    </div>
+    
+                </div>
+            </section>
+            
+            <section id="audio" class="gallery-section">
+            <h3>Examples</h3>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slider-inner">
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3>Input: Image-Speech </h3>
+                                <div class="input-box">
+                                    <p style="text-align: center;">[Audio] What is unusual about this image?</p>
+                                    <div style="text-align: center;">
+                                        <audio controls>
+                                            <source src="./audios/unusual_image.wav" type="audio/wav">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="./figs/unusual_image.png" alt="Input Image" style="max-width:300px; height:auto; margin-top:10px;">
+                                    </div>
+                                </div>
+                                <h3>Trio:</h3>
+                                <div class="output-box">
+                                    <p>The unusual aspect of this image is the house's location on a single rock in the middle of a river. This is not a typical setting for a residential dwelling, as houses are usually built on solid ground to provide stability and protection from water-related hazards. The house's precarious position on the rock suggests that it may be designed for temporary use or as a unique tourist attraction rather than a permanent residence.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3>Input: Image-Speech (Chinese)</h3>
+                                <div class="input-box">
+                                    <p style="text-align: center;">[音频文本] 这张图片有什么不同的地方嘛？请用中文回答</p>
+                                    <div style="text-align: center;">
+                                        <audio controls>
+                                            <source src="./audios/zh.mp3" type="audio/mp3">
+                                            您的浏览器不支持音频元素。
+                                        </audio>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="./figs/extreme_ironing.jpg" alt="Input Image" style="max-width:300px; height:auto; margin-top:10px;">
+                                    </div>
+                                </div>
+                                <h3>Trio:</h3>
+                                <div class="output-box">
+                                    <p>这个场景非常不寻常，因为通常情况下，熨烫衣服是在家中或酒店等相对安静和私密的环境中进行。而在繁忙的城市街道上，特别是在纽约市这种通拥堵的地方，进行这样的活动是非常危险和不合法的。此外，这种行为也违反了当地的交通规则和安全规定。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
        
 
    <!-- Modal for image enlargement -->
